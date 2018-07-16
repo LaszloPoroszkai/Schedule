@@ -1,0 +1,58 @@
+INSERT INTO columns(name, email, password, role)
+ + VALUES (?, ?, ?, ?)
+
+INSERT INTO columns(name, email, password, role, description)
+ + VALUES (?, ?, ?, ?, ?)
+
+SELECT * FROM users ORDER BY name
+
+SELECT * FROM users
+ + WHERE id=?
+
+INSERT INTO schedules(userid, name)
+ + VALUES (?, ?)
+
+DELETE FROM schedules
+ + WHERE id=?;
+
+UPDATE schedules
+ + SET name=? WHERE id=?
+
+SELECT * FROM schedules
+ + WHERE userid=?
+
+INSERT INTO columns(scheduleId, title)
+ + VALUES (?, ?)
+
+DELETE FROM columns
+ + WHERE id=?;
+
+UPDATE columns
+ + SET title=? WHERE id=?
+
+SELECT * FROM columns
+ + WHERE scheduleId=?
+
+INSERT INTO tasks(userid, title)
+ + VALUES (?, ?)
+
+DELETE FROM tasks
+ + WHERE id=?;
+
+UPDATE tasks
+ + SET title=? WHERE id=?
+
+SELECT * FROM tasks
+ + WHERE userid=?
+
+INSERT INTO events(columnid, taskid, starttime, endtime, description)
+ + VALUES (?, ?, ?, ?, ?)
+
+DELETE FROM events
+ + WHERE id=?
+
+UPDATE events
+ + SET starttime=?, SET endtime=?, SET description=? WHERE id=?
+
+SELECT * FROM events
+ + WHERE columnid=?
